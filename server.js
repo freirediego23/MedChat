@@ -31,8 +31,8 @@ io.on('connection', socket => {
 
 
         //Welcome current users
-         socket.emit('message', formatMessage(botName, 'Welcome to the chatapp!'));
-
+         socket.emit('message', formatMessage(botName, 'Welcome to MedCord!'));
+         socket.emit('message', formatMessage(botName, 'Please wait until your doctor joins the room.'));
         // Broadcast to everyone when a user connects
         socket.broadcast
         .to(user.room)
